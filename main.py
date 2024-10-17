@@ -22,12 +22,12 @@ def handle_key():
     if digit_pressed == '1':
         response.say("Connecting to sales.", voice='alice')
         dial = Dial()
-        dial.number("+1456222333")
+        dial.number("+46727242544")
         response.append(dial)
     elif digit_pressed == '2':
         response.say("Connecting to support.", voice='alice')
         dial = Dial()
-        dial.number("+1456222666")
+        dial.number("+46727242544")
         response.append(dial)
     else:
         response.say("Invalid option. Please try again.", voice='alice')
