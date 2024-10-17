@@ -3,6 +3,12 @@ from twilio.twiml.voice_response import VoiceResponse
 
 app = Flask(__name__)
 
+# Retrieve Twilio credentials from environment variables
+TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
+
+# Initialize Twilio client
+client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 @app.route('/incoming', methods=['POST'])
 def incoming_call():
